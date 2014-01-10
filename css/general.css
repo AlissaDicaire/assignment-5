@@ -1,0 +1,408 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@-moz-viewport { width: device-width; scale: 1;}
+@-ms-viewport { width: device-width; scale: 1;}
+@-webkit-viewport { width: device-width; scale: 1;}
+@-o-viewport { width: device-width; scale: 1;}
+@viewport { width: device-width; scale: 1;}
+
+html{
+	-moz-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	-o-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+}
+
+* {
+	margin: 0;
+	padding:0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+
+body { 
+	background-image: url(../images/DSC_1294.JPG);
+}
+
+h1 {
+	text-shadow: 4px 4px 4px #9CF;
+	font-family: 'Roboto Slab', serif;
+	color: #036;
+	font-size: 1rem;
+	text-align: center;
+}
+
+h2 {
+	font-family: 'Roboto Slab', serif;
+	color: #036;
+	font-size: 1rem;
+	margin-bottom: 2rem;
+	margin-top: 1rem;
+	text-align: center;
+}
+
+h3 {
+	font-family: 'Roboto Slab', serif;
+	color: #036;
+	font-size: 1.5rem;
+	text-shadow: 4px 4px 4px #9CF;	
+}
+
+.wrapper {
+	padding:2rem 7%;
+	background-image:url(../images/texture.jpg);
+	margin: -1rem 5%;	
+	width: 90%;
+}
+
+.logo {
+	display: block;
+	width: 100%;
+	max-width: 300px;
+	margin: 0 auto;
+}
+
+img{
+	width: 100%;
+}
+
+@media only screen and (min-width: 100em){
+	html{
+		font-size: 1.5em;
+	}
+}
+
+
+p {
+	font-family: 'Sintony', sans-serif; 
+	padding: .5rem 0 0 0;
+}
+
+.hide-text {
+text-indent: 100%;
+white-space: nowrap;
+overflow: hidden;
+}
+
+/* Navigation and what not */
+
+nav ul {
+	position:relative;
+	width:100%;
+	text-align: center;
+	font-family: 'Roboto Slab', serif;
+	background-image: url(../images/pool.png);
+}
+
+nav li {
+	display: inline; /* The navigations blocks & its position */
+}
+
+nav a,
+nav a:link,
+nav a:visited {
+	display: inline-block;
+	margin-top: 0 1rem;
+	padding: 1rem;
+	color: #E8E3D8
+	text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus,
+nav a:active {
+	background-color: #FFF; /* the colour changes when cursor is over */
+	border-style: hidden;
+}
+
+nav .selected {
+	background-color: #999;
+}
+
+/*footer nav */
+
+nav ul{
+	color: #0CC;
+}
+
+
+/* Toggle Nav*/
+
+.nav-top{
+		display: none;
+}
+
+.nav-top[data-state="expanded"]{
+		display: block;
+}
+
+
+
+@media only screen and (min-width: 25em){
+	.nav{
+		overflow: auto;
+	}
+	
+	.nav li{
+		float: left;
+		width: 33.33%;
+	}
+	
+	.nav-btn,
+	.nav-btn:link,
+	.nav-btn:visited{
+		display: none;
+	}
+	
+	.nav-top{
+		display: block;
+	}
+}
+
+@media only screen and (min-width: 35em){
+	.nav{
+		background-color: #000;
+		text-align: inherit;
+	}
+	
+	.nav li{
+		display: inline-table;
+		float: none;
+		margin: 0;
+		width:auto;
+	}
+	
+	.nav a, 
+	.nav a:link,
+	.nav a:visited{
+		border-top: 0;
+	}
+	
+	.nav-top{
+		float: right;
+		margin-right: 5%;
+	}
+	
+	h1{
+		width: auto;
+		margin-left: 5%;
+	}
+	
+	header{
+		overflow: auto;
+	}
+
+}
+
+@media only screen and (min-width: 40em){
+	.wrapper{
+			margin: -1rem 15%;
+			width: 70%;
+	}
+	
+	nav ul {
+	position:absolute;
+	}
+	
+	nav ul {
+	position:relative;
+	width:100%;
+	height: 3rem;
+	text-align: center;
+	font-family: 'Roboto Slab', serif;
+	background-color: #39C;
+	}
+	
+	nav li {
+		display: inline; /* The navigations blocks & its position */
+	}
+	
+	nav a,
+	nav a:link,
+	nav a:visited {
+		display: inline-block;
+		height: 1rem;
+		margin-top: 0 2%;
+		padding: .8rem 3%;
+		color: #039;
+		text-decoration: none;
+	}
+	
+	nav a:hover,
+	nav a:focus,
+	nav a:active {
+		background-color: #FFF; /* the colour changes when cursor is over */
+		border-style: hidden;
+		height: 3rem;
+	}
+	
+	nav .selected {
+		background-color: #999;
+	}	
+	
+}
+
+@media only screen and (min-width: 75em){
+	masthead{
+		float: left;
+		width: 25%;
+	}
+	
+	.main{
+		float: right;
+		width: 75%;
+		margin-top: 3.125rem;
+	}
+	
+	footer{
+		clear: both;
+	}
+	
+	.hours-list{
+		display: none;
+	}
+	
+}	
+
+/* Homepage */
+
+@media only screen and (min-width: 35em){
+
+	.home .content-image{
+		float: right;
+		width: 50%;
+		margin: 0 0 2rem 1rem;
+	}
+
+	.feature{
+		overflow: auto;
+	}
+	
+	.hours-list{
+		display: none;
+	}
+}
+
+.hours-list li{
+	margin: 1em 0;
+	line-height: 1.3;
+}
+
+.hours-list dt{
+	font-weight: bold;
+}
+
+.hours-list dd:last-child{
+	color: #09C;
+	font-style: italic;
+	font-size: 0.875rem;
+	font-family: 'Roboto Slab', serif;
+}
+
+.hours-table thead{
+	background-color:#09C;
+	color: #fff;
+	font-family: 'Roboto Slab', serif;
+}
+
+.hours-table th,
+.hours-table td{
+	padding: 0.5rem 1rem;
+	text-align: left;
+}
+
+.hours-table tr:nth-child(even){
+	background-color: #f1f1f1;
+}
+
+.hours-table tr:last-child{
+	border-bottom: 3px solid #;
+}
+
+.hours-table{
+	margin-bottom: 2rem;
+	width: 100%;
+	display: none;
+}
+
+table { 
+	table-layout: fixed;
+}
+
+.day{
+	text-align: left;	
+}
+
+@media only screen and (min-width: 25em){
+	.hours-table{
+		display: table;
+	}
+	
+	.hours-list{
+		display: none;
+	}
+	
+	.day{
+		display: none;
+	}
+
+}
+
+.image-list{
+	overflow: auto;
+}
+
+.image-list li{
+	width: 45%;
+	margin: 2.5%;
+	float: left;
+}
+
+@media only screen and (min-width: 25em){
+	.image-list li{
+		width: 28.33%;
+	}
+	
+	img {
+		width: 60%;	
+	}
+}
+
+@media only screen and (min-width: 35em){
+	.image-list li{
+		width: 20%;
+	}
+}
+
+@media only screen and (min-width: 40em){
+	.col{
+		width: 47.5%;
+	}
+
+	.left{
+		float: left;
+	}
+
+	.right{
+		float: right;
+	}
+	
+	.prices .main{
+		overflow: auto;
+	}
+
+}
+
+footer {
+	background-color: #069;
+	color: #fff;
+}
+
+footer p {
+	margin: 2rem 1rem;
+	text-align: right;
+}
